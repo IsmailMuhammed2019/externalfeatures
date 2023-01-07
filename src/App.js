@@ -10,9 +10,11 @@ function App() {
     e.preventDefault()
     if(firstName && email){
       const person = {firstName, email}
+      setPeople((prev) => [...prev, person])
     }else{
       alert("Please fill the form")
     }
+    console.log(people)
   }
 
   return (
