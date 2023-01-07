@@ -7,7 +7,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(firstName, email)
+    if(firstName && email){
+      console.log("Success")
+    }else{
+      console.log("failed")
+    }
   }
 
   return (
