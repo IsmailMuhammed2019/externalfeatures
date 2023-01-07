@@ -4,13 +4,14 @@ import './App.css';
 function App() {
   const [firstName, setFirstName] = useState("")
   const [email, setEmail] = useState("")
+  const [people, setPeople] =useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if(firstName && email){
-      console.log("Success")
+      const person = {firstName, email}
     }else{
-      console.log("failed")
+      alert("Please fill the form")
     }
   }
 
