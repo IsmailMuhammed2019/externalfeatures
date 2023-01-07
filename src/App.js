@@ -9,8 +9,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(firstName && email){
-      const person = {firstName, email}
-      setPeople((prev) => [...prev, person])
+      const person = {id: new Date().getTime().toString(), firstName, email}
+      setPeople((prev) => {
+        return [...prev, person]})
     }else{
       alert("Please fill the form")
     }
